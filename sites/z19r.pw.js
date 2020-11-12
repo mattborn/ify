@@ -6,9 +6,20 @@ moreScripts([
 
 document.addEventListener('AllScriptsLoaded', () => {
 
-  ScrollReveal().reveal('div', {
-    distance: '30%',
-    interval: 50,
+  const revealThese = [
+    'h1',
+    '.navbar-menu .navbar-item',
+    '.tabs li',
+    '.card',
+    '.footer p',
+    'h2',
+    'input',
+    'button'
+  ]
+  ScrollReveal().reveal(revealThese.join(','), {
+    cleanup: true,
+    distance: '48px',
+    interval: 100,
     origin: 'bottom',
   })
 

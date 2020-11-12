@@ -1,0 +1,90 @@
+/* //perishablepress.com/a-killer-collection-of-global-css-reset-styles/ */
+* {
+  border: 0 none;
+  font-family: inherit;
+  font-size: 100%;
+  font-style: inherit;
+  font-weight: inherit;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+/* begin hax0rz */
+
+:root {
+  --color: #420069;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  color: #222;
+  font: 20px/1.5 'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif;
+  margin: 48px auto;
+  max-width: 800px;
+  padding: 24px;
+  text-rendering: geometricPrecision;
+}
+
+/* //dannyguo.com/blog/animated-multiline-link-underlines-with-css/ */
+a {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  color: var(--color);
+  text-decoration: none;
+  transition: background-size .4s cubic-bezier(.9, 0, 0, 1);
+}
+a:focus,
+a:hover { background-size: 100% 2px; }
+
+img,
+.icon { display: none; }
+
+p { margin-bottom: 1em; }
+
+button,
+input {
+  border-radius: 4px;
+  padding: 8px;
+}
+button {
+  background: var(--color);
+  color: #fff;
+  cursor: pointer;
+}
+button:hover { transform: translateY(-1px); }
+button:active { transform: none; }
+input {
+  border: 1px solid #0002;
+}
+
+h1,
+.navbar-menu,
+h2,
+.tabs,
+.card,
+.footer p,
+.breadcrumb,
+form {
+  margin-bottom: 48px;
+}
+
+.tabs ul,
+.breadcrumb ul {
+  align-items: center;
+  list-style-type: none;
+  display: flex;
+}
+.navbar-menu .navbar-item,
+.tabs li,
+.breadcrumb ul li { margin-right: 24px; }
+
+.card {
+  border-bottom: 1px solid #0002;
+  padding-bottom: 48px;
+}
+
+.tag { color: #0006; }
