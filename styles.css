@@ -1,0 +1,43 @@
+:root {
+  --easing: cubic-bezier(.9, 0, 0, 1);
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  align-items: center;
+  color: #222;
+  display: flex;
+  flex-direction: column;
+  font: 20px/1.5 'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif;
+  height: 100vh;
+  justify-content: center;
+  margin: 0;
+}
+
+a {
+  background: #63f;
+  border-radius: 8px;
+  color: #fff;
+  cursor: grab;
+  font-weight: 600;
+  padding: 16px 24px;
+  position: relative;
+  text-decoration: none;
+  transition: transform .4s var(--easing);
+}
+a::after {
+  border-radius: 8px;
+  box-shadow: 0 6px 12px #1036;
+  content: '';
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  transition: opacity .4s var(--easing);
+  width: 100%;
+  z-index: -1;
+}
+a:hover { transform: scale(1.2) translateY(-10px); }
+a:hover::after { opacity: 1; }
+a:focus { cursor: grabbing; }
