@@ -1,0 +1,1 @@
+document.querySelector('[href^="/css"').remove()
