@@ -1,7 +1,7 @@
 (() => {
 
 const sites = [
-  'app.chargeback',
+  'chargeback',
   'z19r.pw'
 ]
 
@@ -9,7 +9,7 @@ const sites = [
 
 const π = JSON.parse(localStorage.getItem('ify'))
 const u = π ? π.src : 'https://rawcdn.githack.com/mattborn/ify/main'
-const h = location.hostname.replace('.com', '')
+const h = location.hostname.split('.').slice(-2).join('.').replace('.com', '')
 const f = sites.includes(h) ? h : 'any'
 
 function getURL(ext) { return `${u}/sites/${f}.${ext}?v=${Date.now()}` }
